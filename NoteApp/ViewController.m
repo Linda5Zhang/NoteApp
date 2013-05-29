@@ -24,7 +24,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [[DBAccountManager sharedManager]linkFromController:self.navigationController];
     
     //Self navigation bar, add a bar button, called 'list of notes'

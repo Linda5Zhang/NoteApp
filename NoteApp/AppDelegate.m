@@ -32,7 +32,10 @@
     if (account) {
         DBFilesystem *filesystem = [[DBFilesystem alloc] initWithAccount:account];
         [DBFilesystem setSharedFilesystem:filesystem];
+//        [filesystem listFolder:(DBPath *)root error:nil];
     }
+    
+    
     
     
     ViewController *vc = [[ViewController alloc] init];

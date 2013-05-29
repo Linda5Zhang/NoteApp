@@ -46,9 +46,6 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)viewDidAppear:(BOOL)animated{
-    [self.tableView reloadData];
-}
 
 
 - (void)didReceiveMemoryWarning
@@ -94,7 +91,6 @@
         cell.imageView.image = theImage;
         cell.textView.text = @"";
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
     } else {
         self.isImageFile = NO;
         
@@ -105,6 +101,7 @@
         cell.textView.text = theContents;
         cell.imageView.image = nil;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     }
         
     return cell;
