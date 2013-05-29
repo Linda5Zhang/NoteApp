@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D257208174D731F002BEE2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D257207174D731F002BEE2E /* UIKit.framework */; };
+		3D25720A174D731F002BEE2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D257209174D731F002BEE2E /* Foundation.framework */; };
+		3D25720C174D731F002BEE2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D25720B174D731F002BEE2E /* CoreGraphics.framework */; };
+		3D257212174D731F002BEE2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D257210174D731F002BEE2E /* InfoPlist.strings */; };
+		3D257214174D731F002BEE2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D257213174D731F002BEE2E /* main.m */; };
+		3D257218174D731F002BEE2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D257217174D731F002BEE2E /* AppDelegate.m */; };
+		3D25721A174D731F002BEE2E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D257219174D731F002BEE2E /* Default.png */; };
+		3D25721C174D731F002BEE2E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D25721B174D731F002BEE2E /* Default@2x.png */; };
+		3D25721E174D731F002BEE2E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D25721D174D731F002BEE2E /* Default-568h@2x.png */; };
+		3D257221174D731F002BEE2E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D25721F174D731F002BEE2E /* MainStoryboard.storyboard */; };
+		3D257224174D731F002BEE2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D257223174D731F002BEE2E /* ViewController.m */; };
+		3D25722B174D8A10002BEE2E /* dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D25722A174D8A10002BEE2E /* dropbox.framework */; };
+		3D25728D174D9DBA002BEE2E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D25728C174D9DBA002BEE2E /* CFNetwork.framework */; };
+		3D25728F174D9DC2002BEE2E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D25728E174D9DC2002BEE2E /* Security.framework */; };
+		3D257291174D9DE2002BEE2E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D257290174D9DE2002BEE2E /* SystemConfiguration.framework */; };
+		3D257293174D9DE7002BEE2E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D257292174D9DE7002BEE2E /* QuartzCore.framework */; };
+		3D698B1117533772008A0E5D /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D698B1017533772008A0E5D /* EventKit.framework */; };
+		3DB55FD4174DCA0800B19463 /* note_icon57*57.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB55FD3174DCA0800B19463 /* note_icon57*57.png */; };
+		3DB55FD6174DCA0C00B19463 /* note_icon114*114.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB55FD5174DCA0C00B19463 /* note_icon114*114.png */; };
+		3DDB504E1752AB0700041C6A /* NotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB504D1752AB0700041C6A /* NotesTableViewController.m */; };
+		3DDB50511752F2E200041C6A /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB50501752F2E200041C6A /* CustomCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D257204174D731F002BEE2E /* NoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D257207174D731F002BEE2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3D257209174D731F002BEE2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D25720B174D731F002BEE2E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3D25720F174D731F002BEE2E /* NoteApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NoteApp-Info.plist"; sourceTree = "<group>"; };
+		3D257211174D731F002BEE2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D257213174D731F002BEE2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D257215174D731F002BEE2E /* NoteApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoteApp-Prefix.pch"; sourceTree = "<group>"; };
+		3D257216174D731F002BEE2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3D257217174D731F002BEE2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3D257219174D731F002BEE2E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3D25721B174D731F002BEE2E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3D25721D174D731F002BEE2E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3D257220174D731F002BEE2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		3D257222174D731F002BEE2E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3D257223174D731F002BEE2E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3D25722A174D8A10002BEE2E /* dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = dropbox.framework; sourceTree = "<group>"; };
+		3D25728C174D9DBA002BEE2E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3D25728E174D9DC2002BEE2E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3D257290174D9DE2002BEE2E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3D257292174D9DE7002BEE2E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3D698B1017533772008A0E5D /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		3DB55FD3174DCA0800B19463 /* note_icon57*57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "note_icon57*57.png"; sourceTree = "<group>"; };
+		3DB55FD5174DCA0C00B19463 /* note_icon114*114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "note_icon114*114.png"; sourceTree = "<group>"; };
+		3DDB504C1752AB0700041C6A /* NotesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesTableViewController.h; sourceTree = "<group>"; };
+		3DDB504D1752AB0700041C6A /* NotesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesTableViewController.m; sourceTree = "<group>"; };
+		3DDB504F1752F2E200041C6A /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		3DDB50501752F2E200041C6A /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D257201174D731F002BEE2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D698B1117533772008A0E5D /* EventKit.framework in Frameworks */,
+				3D257293174D9DE7002BEE2E /* QuartzCore.framework in Frameworks */,
+				3D257291174D9DE2002BEE2E /* SystemConfiguration.framework in Frameworks */,
+				3D25728F174D9DC2002BEE2E /* Security.framework in Frameworks */,
+				3D25728D174D9DBA002BEE2E /* CFNetwork.framework in Frameworks */,
+				3D257208174D731F002BEE2E /* UIKit.framework in Frameworks */,
+				3D25720A174D731F002BEE2E /* Foundation.framework in Frameworks */,
+				3D25720C174D731F002BEE2E /* CoreGraphics.framework in Frameworks */,
+				3D25722B174D8A10002BEE2E /* dropbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D2571FB174D731F002BEE2E = {
+			isa = PBXGroup;
+			children = (
+				3DB55FD5174DCA0C00B19463 /* note_icon114*114.png */,
+				3DB55FD3174DCA0800B19463 /* note_icon57*57.png */,
+				3D698B1017533772008A0E5D /* EventKit.framework */,
+				3D257292174D9DE7002BEE2E /* QuartzCore.framework */,
+				3D257290174D9DE2002BEE2E /* SystemConfiguration.framework */,
+				3D25728E174D9DC2002BEE2E /* Security.framework */,
+				3D25728C174D9DBA002BEE2E /* CFNetwork.framework */,
+				3D25722A174D8A10002BEE2E /* dropbox.framework */,
+				3D25720D174D731F002BEE2E /* NoteApp */,
+				3D257206174D731F002BEE2E /* Frameworks */,
+				3D257205174D731F002BEE2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D257205174D731F002BEE2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D257204174D731F002BEE2E /* NoteApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D257206174D731F002BEE2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D257207174D731F002BEE2E /* UIKit.framework */,
+				3D257209174D731F002BEE2E /* Foundation.framework */,
+				3D25720B174D731F002BEE2E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D25720D174D731F002BEE2E /* NoteApp */ = {
+			isa = PBXGroup;
+			children = (
+				3D257216174D731F002BEE2E /* AppDelegate.h */,
+				3D257217174D731F002BEE2E /* AppDelegate.m */,
+				3DDB504F1752F2E200041C6A /* CustomCell.h */,
+				3DDB50501752F2E200041C6A /* CustomCell.m */,
+				3DDB504C1752AB0700041C6A /* NotesTableViewController.h */,
+				3DDB504D1752AB0700041C6A /* NotesTableViewController.m */,
+				3D25721F174D731F002BEE2E /* MainStoryboard.storyboard */,
+				3D257222174D731F002BEE2E /* ViewController.h */,
+				3D257223174D731F002BEE2E /* ViewController.m */,
+				3DB55FCE174DC7D600B19463 /* image */,
+				3D25720E174D731F002BEE2E /* Supporting Files */,
+			);
+			path = NoteApp;
+			sourceTree = "<group>";
+		};
+		3D25720E174D731F002BEE2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D25720F174D731F002BEE2E /* NoteApp-Info.plist */,
+				3D257210174D731F002BEE2E /* InfoPlist.strings */,
+				3D257213174D731F002BEE2E /* main.m */,
+				3D257215174D731F002BEE2E /* NoteApp-Prefix.pch */,
+				3D257219174D731F002BEE2E /* Default.png */,
+				3D25721B174D731F002BEE2E /* Default@2x.png */,
+				3D25721D174D731F002BEE2E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DB55FCE174DC7D600B19463 /* image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D257203174D731F002BEE2E /* NoteApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D257227174D731F002BEE2E /* Build configuration list for PBXNativeTarget "NoteApp" */;
+			buildPhases = (
+				3D257200174D731F002BEE2E /* Sources */,
+				3D257201174D731F002BEE2E /* Frameworks */,
+				3D257202174D731F002BEE2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NoteApp;
+			productName = NoteApp;
+			productReference = 3D257204174D731F002BEE2E /* NoteApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D2571FC174D731F002BEE2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = yueling;
+			};
+			buildConfigurationList = 3D2571FF174D731F002BEE2E /* Build configuration list for PBXProject "NoteApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3D2571FB174D731F002BEE2E;
+			productRefGroup = 3D257205174D731F002BEE2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D257203174D731F002BEE2E /* NoteApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D257202174D731F002BEE2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D257212174D731F002BEE2E /* InfoPlist.strings in Resources */,
+				3D25721A174D731F002BEE2E /* Default.png in Resources */,
+				3D25721C174D731F002BEE2E /* Default@2x.png in Resources */,
+				3D25721E174D731F002BEE2E /* Default-568h@2x.png in Resources */,
+				3D257221174D731F002BEE2E /* MainStoryboard.storyboard in Resources */,
+				3DB55FD4174DCA0800B19463 /* note_icon57*57.png in Resources */,
+				3DB55FD6174DCA0C00B19463 /* note_icon114*114.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D257200174D731F002BEE2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D257214174D731F002BEE2E /* main.m in Sources */,
+				3D257218174D731F002BEE2E /* AppDelegate.m in Sources */,
+				3D257224174D731F002BEE2E /* ViewController.m in Sources */,
+				3DDB504E1752AB0700041C6A /* NotesTableViewController.m in Sources */,
+				3DDB50511752F2E200041C6A /* CustomCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3D257210174D731F002BEE2E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D257211174D731F002BEE2E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3D25721F174D731F002BEE2E /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D257220174D731F002BEE2E /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D257225174D731F002BEE2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3D257226174D731F002BEE2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D257228174D731F002BEE2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NoteApp/NoteApp-Prefix.pch";
+				INFOPLIST_FILE = "NoteApp/NoteApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3D257229174D731F002BEE2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NoteApp/NoteApp-Prefix.pch";
+				INFOPLIST_FILE = "NoteApp/NoteApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D2571FF174D731F002BEE2E /* Build configuration list for PBXProject "NoteApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D257225174D731F002BEE2E /* Debug */,
+				3D257226174D731F002BEE2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D257227174D731F002BEE2E /* Build configuration list for PBXNativeTarget "NoteApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D257228174D731F002BEE2E /* Debug */,
+				3D257229174D731F002BEE2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D2571FC174D731F002BEE2E /* Project object */;
+}
