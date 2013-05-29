@@ -25,6 +25,8 @@
 {
     [super viewDidLoad];
     
+    [[DBAccountManager sharedManager]linkFromController:self.navigationController];
+    
     //Self navigation bar, add a bar button, called 'list of notes'
     UIBarButtonItem* listOfNotes = [[UIBarButtonItem alloc] initWithTitle:@"List Of Notes" style:UIBarButtonItemStyleBordered target:self action:@selector(listNotes)];
     self.navigationItem.rightBarButtonItem = listOfNotes;
