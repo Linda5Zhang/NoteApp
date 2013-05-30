@@ -1,4 +1,4 @@
-//
+
 //  AppDelegate.m
 //  NoteApp
 //
@@ -23,20 +23,9 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    
     DBAccountManager* accountMgr = [[DBAccountManager alloc] initWithAppKey:@"yq1oysgxn1nh5tz" secret:@"mx2fm24vq5kswz5"];
     [DBAccountManager setSharedManager:accountMgr];
-    
-    
-    DBAccount *account = accountMgr.linkedAccount;
-    if (account) {
-        DBFilesystem *filesystem = [[DBFilesystem alloc] initWithAccount:account];
-        [DBFilesystem setSharedFilesystem:filesystem];
-//        [filesystem listFolder:(DBPath *)root error:nil];
-    }
-    
-    
-    
+
     
     ViewController *vc = [[ViewController alloc] init];
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:vc];
@@ -53,6 +42,8 @@
     DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
     if (account) {
         NSLog(@"App linked successfully!");
+        DBFilesystem *filesystem = [[DBFilesystem alloc] initWithAccount:account];
+        [DBFilesystem setSharedFilesystem:filesystem];
         return YES;
     }
 }

@@ -36,6 +36,8 @@
     
     [self.tableView registerClass:[CustomCell class] forCellReuseIdentifier:@"Cell"];
     
+ 
+    
     NSArray* filesArray = [[DBFilesystem sharedFilesystem] listFolder:[DBPath root] error:nil];
     self.contents = [[NSMutableArray alloc] initWithArray:filesArray];
     
