@@ -23,10 +23,6 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    DBAccountManager* accountMgr = [[DBAccountManager alloc] initWithAppKey:@"yq1oysgxn1nh5tz" secret:@"mx2fm24vq5kswz5"];
-    [DBAccountManager setSharedManager:accountMgr];
-
-    
     ViewController *vc = [[ViewController alloc] init];
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:vc];
     
@@ -34,19 +30,32 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    DBAccountManager *accountMgr = [[DBAccountManager alloc] initWithAppKey:@"yq1oysgxn1nh5tz" secret:@"mx2fm24vq5kswz5"];
+    [DBAccountManager setSharedManager:accountMgr];
+    
+    DBAccount *account = accountMgr.linkedAccount;
+    if (account) {
+        NSLog(@"App linked successfully!");
+        DBFilesystem *filesystem = [[DBFilesystem alloc] initWithAccount:account];
+        [DBFilesystem setSharedFilesystem:filesystem];
+    }
+    
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url
   sourceApplication:(NSString *)source annotation:(id)annotation {
+    
     DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
     if (account) {
         NSLog(@"App linked successfully!");
         DBFilesystem *filesystem = [[DBFilesystem alloc] initWithAccount:account];
         [DBFilesystem setSharedFilesystem:filesystem];
-        return YES;
     }
+    return YES;
+    
 }
+
 
 							
 - (void)applicationWillResignActive:(UIApplication *)application

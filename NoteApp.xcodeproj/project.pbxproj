@@ -24,6 +24,7 @@
 		3D257291174D9DE2002BEE2E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D257290174D9DE2002BEE2E /* SystemConfiguration.framework */; };
 		3D257293174D9DE7002BEE2E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D257292174D9DE7002BEE2E /* QuartzCore.framework */; };
 		3D698B1117533772008A0E5D /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D698B1017533772008A0E5D /* EventKit.framework */; };
+		3D94B88F17A08E850099CDEF /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D94B88E17A08E850099CDEF /* background.png */; };
 		3DB55FD4174DCA0800B19463 /* note_icon57*57.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB55FD3174DCA0800B19463 /* note_icon57*57.png */; };
 		3DB55FD6174DCA0C00B19463 /* note_icon114*114.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB55FD5174DCA0C00B19463 /* note_icon114*114.png */; };
 		3DDB504E1752AB0700041C6A /* NotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB504D1752AB0700041C6A /* NotesTableViewController.m */; };
@@ -53,6 +54,7 @@
 		3D257290174D9DE2002BEE2E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3D257292174D9DE7002BEE2E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3D698B1017533772008A0E5D /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		3D94B88E17A08E850099CDEF /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		3DB55FD3174DCA0800B19463 /* note_icon57*57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "note_icon57*57.png"; sourceTree = "<group>"; };
 		3DB55FD5174DCA0C00B19463 /* note_icon114*114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "note_icon114*114.png"; sourceTree = "<group>"; };
 		3DDB504C1752AB0700041C6A /* NotesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesTableViewController.h; sourceTree = "<group>"; };
@@ -86,12 +88,6 @@
 			children = (
 				3DB55FD5174DCA0C00B19463 /* note_icon114*114.png */,
 				3DB55FD3174DCA0800B19463 /* note_icon57*57.png */,
-				3D698B1017533772008A0E5D /* EventKit.framework */,
-				3D257292174D9DE7002BEE2E /* QuartzCore.framework */,
-				3D257290174D9DE2002BEE2E /* SystemConfiguration.framework */,
-				3D25728E174D9DC2002BEE2E /* Security.framework */,
-				3D25728C174D9DBA002BEE2E /* CFNetwork.framework */,
-				3D25722A174D8A10002BEE2E /* dropbox.framework */,
 				3D25720D174D731F002BEE2E /* NoteApp */,
 				3D257206174D731F002BEE2E /* Frameworks */,
 				3D257205174D731F002BEE2E /* Products */,
@@ -109,6 +105,7 @@
 		3D257206174D731F002BEE2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DDE0C79179FC2FE006AFA99 /* NewFrameworks */,
 				3D257207174D731F002BEE2E /* UIKit.framework */,
 				3D257209174D731F002BEE2E /* Foundation.framework */,
 				3D25720B174D731F002BEE2E /* CoreGraphics.framework */,
@@ -119,15 +116,15 @@
 		3D25720D174D731F002BEE2E /* NoteApp */ = {
 			isa = PBXGroup;
 			children = (
+				3D25721F174D731F002BEE2E /* MainStoryboard.storyboard */,
 				3D257216174D731F002BEE2E /* AppDelegate.h */,
 				3D257217174D731F002BEE2E /* AppDelegate.m */,
-				3DDB504F1752F2E200041C6A /* CustomCell.h */,
-				3DDB50501752F2E200041C6A /* CustomCell.m */,
 				3DDB504C1752AB0700041C6A /* NotesTableViewController.h */,
 				3DDB504D1752AB0700041C6A /* NotesTableViewController.m */,
-				3D25721F174D731F002BEE2E /* MainStoryboard.storyboard */,
 				3D257222174D731F002BEE2E /* ViewController.h */,
 				3D257223174D731F002BEE2E /* ViewController.m */,
+				3DDB504F1752F2E200041C6A /* CustomCell.h */,
+				3DDB50501752F2E200041C6A /* CustomCell.m */,
 				3DB55FCE174DC7D600B19463 /* image */,
 				3D25720E174D731F002BEE2E /* Supporting Files */,
 			);
@@ -151,8 +148,22 @@
 		3DB55FCE174DC7D600B19463 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				3D94B88E17A08E850099CDEF /* background.png */,
 			);
 			name = image;
+			sourceTree = "<group>";
+		};
+		3DDE0C79179FC2FE006AFA99 /* NewFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D698B1017533772008A0E5D /* EventKit.framework */,
+				3D257292174D9DE7002BEE2E /* QuartzCore.framework */,
+				3D257290174D9DE2002BEE2E /* SystemConfiguration.framework */,
+				3D25728E174D9DC2002BEE2E /* Security.framework */,
+				3D25728C174D9DBA002BEE2E /* CFNetwork.framework */,
+				3D25722A174D8A10002BEE2E /* dropbox.framework */,
+			);
+			name = NewFrameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 				3D257221174D731F002BEE2E /* MainStoryboard.storyboard in Resources */,
 				3DB55FD4174DCA0800B19463 /* note_icon57*57.png in Resources */,
 				3DB55FD6174DCA0C00B19463 /* note_icon114*114.png in Resources */,
+				3D94B88F17A08E850099CDEF /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

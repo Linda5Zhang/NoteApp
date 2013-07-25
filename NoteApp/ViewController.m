@@ -16,6 +16,8 @@
 @property (strong, nonatomic)UITextView* textView;
 @property (strong, nonatomic)UIImageView* imageView;
 @property BOOL isAddImage;
+@property int flag;
+@property (strong, nonatomic)NotesTableViewController* ntvc;
 
 @end
 
@@ -24,11 +26,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[DBAccountManager sharedManager]linkFromController:self.navigationController];
+    self.flag = 0;
     
     //Self navigation bar, add a bar button, called 'list of notes'
     UIBarButtonItem* listOfNotes = [[UIBarButtonItem alloc] initWithTitle:@"List Of Notes" style:UIBarButtonItemStyleBordered target:self action:@selector(listNotes)];
-    self.navigationItem.rightBarButtonItem = listOfNotes;
+    self.navigationItem.leftBarButtonItem = listOfNotes;
+    
+    UIBarButtonItem* saveBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleBordered target:self action:@selector(saveNote)];
+    self.navigationItem.rightBarButtonItem  = saveBarButton;
+    
     
     self.textView = [[UITextView alloc] initWithFrame:CGRectMake(5, 5, self.view.bounds.size.width, 160)];
     self.textView.backgroundColor = [UIColor clearColor];
@@ -36,7 +42,7 @@
     self.textView.textColor =[UIColor blueColor];
     self.textView.delegate = self;
     
-    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, self.view.bounds.size.width, self.view.bounds.size.height)];
+    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     [self.view addSubview:self.imageView];
     [self.view addSubview:self.textView];
     
@@ -60,17 +66,20 @@
     
 }
 
-
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self.textView becomeFirstResponder];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    self.imageView.image = nil;
-    self.textView.text = @"";
-    [self.textView becomeFirstResponder];
+    DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
+    if (account) {
+        NSLog(@"flag is %i",self.flag);
+        if (self.flag == 1) {
+            [self.textView resignFirstResponder];
+        }else{
+            [self.textView becomeFirstResponder];
+        }
+    }else{
+        //link to a user's account
+        [[DBAccountManager sharedManager]linkFromController:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,8 +98,8 @@
 
 - (void) listNotes
 {
-    NotesTableViewController* ntvc = [[NotesTableViewController alloc] init];
-    [self.navigationController pushViewController:ntvc animated:YES];
+    self.ntvc = [[NotesTableViewController alloc] init];
+    [self.navigationController pushViewController:_ntvc animated:YES];
 }
 
 - (void) addPhotos
@@ -101,11 +110,12 @@
     [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
-- (void) doneTyping
+- (void)saveNote
 {
+    self.flag = 0;
     //No text or photo, show alert
     if ([[self.textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]length] == 0 && self.isAddImage == NO) {
-    
+        
         UIAlertView *emptyAlert = [[UIAlertView alloc] initWithTitle:@"Empty" message:@"The note is empty." delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"ok", nil];
         [emptyAlert show];
         
@@ -161,7 +171,7 @@
                     [eventStore saveEvent:myEvent span:EKSpanThisEvent error:&err];
                     if (err) {
                         NSLog(@"Unable to save event to the calendar. Error is : %@",err);
-                    }   
+                    }
                 }
                 
             }//end add reminder
@@ -197,7 +207,7 @@
             [file writeData:imageData error:nil];
             NSLog(@"save the image file to dropbox.");
         }
-
+        
         [self.textView becomeFirstResponder];
         self.imageView.image = nil;
         self.textView.text = @"";
@@ -205,10 +215,17 @@
     
 }
 
+- (void) doneTyping
+{
+    [self.textView resignFirstResponder];
+    
+}
+
 
 #pragma mark UIImagePickerControllerDelegate methods
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    self.flag = 1;
     // Access the image from info dictionary
     UIImage* image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     // Dismiss controller
